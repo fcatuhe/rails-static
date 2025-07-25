@@ -89,6 +89,7 @@ GEM
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    decant (0.4.0)
     drb (2.2.3)
     erb (5.0.2)
     erubi (1.13.1)
@@ -106,6 +107,10 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.13.1)
+    kramdown (2.5.1)
+      rexml (>= 3.3.9)
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -210,6 +215,7 @@ GEM
     regexp_parser (2.10.0)
     reline (0.6.2)
       io-console (~> 0.5)
+    rexml (3.4.1)
     rubocop (1.79.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -284,7 +290,10 @@ DEPENDENCIES
   bootsnap
   brakeman
   debug
+  decant
   importmap-rails
+  kramdown
+  kramdown-parser-gfm
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2)
