@@ -8,6 +8,7 @@ Page = Decant.define(dir: "app/views/pages", ext: "md") do
   end
 
   def html
-    Kramdown::Document.new(content, input: "GFM").to_html
+    erb_parsed_content = PagesController.render(inline: content)
+    Kramdown::Document.new(erb_parsed_content, input: "GFM").to_html
   end
 end
