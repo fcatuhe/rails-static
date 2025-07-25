@@ -25,6 +25,7 @@ gem "bootsnap", require: false
 gem "decant"
 gem "kramdown"
 gem "kramdown-parser-gfm"
+gem "parklife"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
