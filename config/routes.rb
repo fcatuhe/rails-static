@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  root "pages#show", slug: "index"
+  get "/*slug", to: "pages#show", as: :page
 end
