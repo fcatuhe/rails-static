@@ -46,6 +46,6 @@ _Commit: [Stimulus](){:target="github"}_
 
 ---
 
-→ <%= link_to_page "importmap" %>
+→ <%= link_to_page "importmap", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
 
-_← <%= link_to_page "turbo" %>_
+_← <%= link_to_page "turbo", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_
