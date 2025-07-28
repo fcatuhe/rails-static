@@ -22,11 +22,13 @@ We can use Ruby directly in our markdown files. Like this:
 
 ##### _app/views/erb.md_
 
-```ruby
+```erb
 ...
+
 <%%- Page.all.select(&:position).sort_by(&:position).each do |page| %>
   - <%%= link_to page.title, page.slug %>
 <%%- end %>
+
 ...
 ```
 
@@ -44,8 +46,8 @@ We can create more helpers to be used directly from our page content files:
 
 ```ruby
 module PagesHelper
-  def link_to_page(slug)
-    link_to Page.find(slug).title, page_path(slug)
+  def link_to_page(slug, html_options = nil)
+    link_to Page.find(slug).title, page_path(slug), html_options
   end
 
   def pages_image_tag(path)
@@ -75,5 +77,7 @@ end
 _Commit: [ERB](https://github.com/fcatuhe/rails-static/commit/cd15800c030a0f54d095732173defb9e2c8616e7){:target="github"}_
 
 ---
+
+→ <%= link_to_page "turbo" %>
 
 _← <%= link_to_page "parklife" %>_
