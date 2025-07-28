@@ -42,19 +42,19 @@ gh repo create rails-static --public --source=. --remote=origin --push
 
 The GitHub action will fail:
 
-<%= pages_image_tag "failure.png" %>
+<%= pages_image_tag "failure.png", title: "GitHub Actions workflow showing failed deployment with red X mark" %>
 
 The repository needs to be configured to build and deploy Pages from Actions:
 
-<%= pages_image_tag "configure-github-pages.png" %>
+<%= pages_image_tag "configure-github-pages.png", title: "GitHub repository settings page showing Pages configuration with 'Build and deployment' section set to 'GitHub Actions' source" %>
 
 And the GitHub Action triggered to re-run:
 
-<%= pages_image_tag "re-run.png" %>
+<%= pages_image_tag "re-run.png", title: "GitHub Actions page with 'Re-run all jobs' button highlighted to retry the failed workflow" %>
 
 ### Voilà, the website is online!
 
-<%= pages_image_tag "rails-static.png" %>
+<%= pages_image_tag "rails-static.png", title: "Successfully deployed Rails Static website showing the homepage with title and navigation" %>
 
 ---
 
