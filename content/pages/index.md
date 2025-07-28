@@ -7,43 +7,41 @@ position: 0
 
 _Generate static sites with Rails · a step by step guide_
 
-### Why learn another framework?
+### Another framework?
 
-The Ruby ecosystem already offers many static site generators - [Jekyll](https://jekyllrb.com){:target="jekyll"}, [Middleman](https://middlemanapp.com){:target="middleman"}, [Kamal Skiff](https://github.com/basecamp/kamal-skiff){:target="skiff"}, [Sitepress](https://sitepress.cc){:target="sitepress"}, [Bridgetown](https://www.bridgetownrb.com/){:target="bridgetown"}, [High Voltage](https://thoughtbot.github.io/high_voltage){:target="high-voltage"}, [Nanoc](https://nanoc.app){:target="nanoc"} - and countless more exist beyond Ruby.
+The Ruby ecosystem offers many static site generators - [Jekyll](https://jekyllrb.com){:target="jekyll"}, [Middleman](https://middlemanapp.com){:target="middleman"}, [Kamal Skiff](https://github.com/basecamp/kamal-skiff){:target="skiff"}, [Sitepress](https://sitepress.cc){:target="sitepress"}, [Bridgetown](https://www.bridgetownrb.com/){:target="bridgetown"}, [High Voltage](https://thoughtbot.github.io/high_voltage){:target="high-voltage"}, [Nanoc](https://nanoc.app){:target="nanoc"}, ... - and countless more exist beyond Ruby.
 
 The intent here is **to remove one** - to use Rails and all its magic goodies for both dynamic and static sites.
 
 This is not a new framework. It's a thoughtful collection of existing gems that each excel at one task and integrate seamlessly with Rails.
 
-This very website is built using this approach — let's learn how to build and deploy it together!
+This very website is generated using this approach - let's learn how to build and deploy it together!
 
-→ <%= link_to_page "rails-and-hotwire" %>
+→ <%= link_to_page "rails-and-hotwire", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
 
 ---
 
 #### What you will learn
 
-This guide will teach you how to transform Rails into a powerful static site generator while keeping all the Rails conventions and tools you already know. You will discover how to:
+This guide will teach you how to transform Rails into a powerful static site generator, leveraging a modern Hotwire stack. You will discover how to:
 
-- Set up Rails as a static site generator using a minimal set of modules
-- Process markdown content with Decant and Kramdown
+- Create a minimal Rails application optimized for static site generation
+- Process markdown content with frontmatter using Decant and Kramdown
+- Use ERB template processing for dynamic content generation
 - Deploy automatically to GitHub Pages with Parklife
-
-#### What you will build
-
-By following this guide, you will create:
-
-- A fully functional static site that leverages Rails' MVC architecture
-- An automated deployment pipeline to GitHub Pages
-- A content management system using markdown files with frontmatter
-- A site that combines the simplicity of static generation with Rails' power and extensibility
+- Enhance user experience with Turbo Drive for instant page navigation
+- Add interactive features using Stimulus controllers
+- Manage JavaScript dependencies with Importmap for modern ES modules
+- Implement live-reloading during development with Hotwire Spark
 
 #### What you need
 
 Before starting, you should have:
 
 - Basic knowledge of Ruby and Rails
-- Ruby 3.4+ and Rails 8+ installed
-- A GitHub account for deployment
+- Ruby 3.4+ and Rails 8+ installed on your system
+- A GitHub account for repository hosting and Pages deployment
+- Familiarity with Markdown syntax for content creation
+- Basic understanding of JavaScript
 
 → <%= link_to_page "rails-and-hotwire" %>

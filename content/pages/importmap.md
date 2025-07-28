@@ -109,8 +109,10 @@ export default class extends Controller {
 
 ---
 
-_Commit: [Importmap](){:target="github"}_
+_Commit: [Importmap](https://github.com/fcatuhe/rails-static/commit/8f8d12037a9d8847a395919c07b18b5538405f9e){:target="github"}_
 
 ---
 
-_← <%= link_to_page "stimulus" %>_
+→ <%= link_to_page "spark", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
+
+_← <%= link_to_page "stimulus", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_

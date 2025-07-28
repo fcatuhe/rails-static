@@ -62,6 +62,6 @@ _Commit: [Parklife](https://github.com/fcatuhe/rails-static/commit/89be109ebe531
 
 ---
 
-→ <%= link_to_page "erb" %>
+→ <%= link_to_page "erb", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
 
-_← <%= link_to_page "decant-and-kramdown" %>_
+_← <%= link_to_page "decant-and-kramdown", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_

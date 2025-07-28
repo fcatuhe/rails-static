@@ -78,6 +78,6 @@ _Commit: [ERB](https://github.com/fcatuhe/rails-static/commit/cd15800c030a0f54d0
 
 ---
 
-→ <%= link_to_page "turbo" %>
+→ <%= link_to_page "turbo", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
 
-_← <%= link_to_page "parklife" %>_
+_← <%= link_to_page "parklife", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_

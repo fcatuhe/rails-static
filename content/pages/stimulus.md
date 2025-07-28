@@ -42,7 +42,7 @@ export default class extends Controller {
 
 ---
 
-_Commit: [Stimulus](){:target="github"}_
+_Commit: [Stimulus](https://github.com/fcatuhe/rails-static/commit/b6170767207c038fe4e518a889d7cbcfdee4ffa0){:target="github"}_
 
 ---
 
