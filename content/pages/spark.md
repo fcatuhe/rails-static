@@ -14,6 +14,7 @@ position: 8
 ##### _Gemfile_
 
 ```ruby
+...
 
 group :development do
   ...

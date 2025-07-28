@@ -5,7 +5,8 @@ position: 9
 
 # <%= @page.title %>
 
-- Generate a sitemap
+- Generate a sitemap, including robots file
+- Add web page metadata, including canonical URL
 - Update layout to add navigation bar in header, and refactor navigation in footer
 - Add code syntax highlighting
 - Experiment a very minimal Rails configuration
