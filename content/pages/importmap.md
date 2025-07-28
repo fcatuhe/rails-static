@@ -103,6 +103,10 @@ export default class extends Controller {
 ...
 ```
 
+<button data-controller="confetti hotkey" data-action="confetti#celebrate keydown.c@document->hotkey#click" style="display: block; margin: auto; background-color: #0055A4; color: white;" >
+  🎉 Celebrate! 🎉
+</button>
+
 ---
 
 _Commit: [Importmap](){:target="github"}_
