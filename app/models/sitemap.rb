@@ -29,7 +29,7 @@ class Sitemap
   def write_sitemap!
     File.write(sitemap_path, xml_sitemap)
 
-    puts "Generated sitemap.xml with #{total_pages} URLs"
+    Rails.logger.info("Generated sitemap.xml with #{total_pages} URLs")
   end
 
   def write_compressed_sitemap!
@@ -37,7 +37,7 @@ class Sitemap
       gzip.write(xml_sitemap.squish)
     end
 
-    puts "Generated sitemap.xml.gz (compressed)"
+    Rails.logger.info("Generated sitemap.xml.gz (compressed)")
   end
 
   # XML generation

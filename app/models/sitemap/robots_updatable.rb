@@ -7,7 +7,7 @@ class Sitemap
 
       update_robots_file!
 
-      puts_robots_action
+      log_robots_action
     end
 
     private
@@ -16,9 +16,9 @@ class Sitemap
       File.write(robots_file_path, robots_content)
     end
 
-    def puts_robots_action
+    def log_robots_action
       action = robots_file_exists? ? "Updated" : "Created"
-      puts "#{action} robots.txt with sitemap location"
+      Rails.logger.info("#{action} robots.txt with sitemap location")
     end
 
     # Content generation

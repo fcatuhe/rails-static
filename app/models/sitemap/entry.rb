@@ -48,8 +48,8 @@ class Sitemap::Entry
   end
 
   def git_timestamp
-    git_date = `git log --format="%ad" --date=iso-strict -1 "#{source_file}" 2>/dev/null`.strip
-    git_date.presence
+    stdout, status = Open3.capture2("git", "log", "--format=%ad", "--date=iso-strict", "-1", source_file)
+    status.success? ? stdout.strip.presence : nil
   end
 
   def file_timestamp
