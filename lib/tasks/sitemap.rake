@@ -2,7 +2,7 @@
 namespace :sitemap do
   desc "Generate sitemap.xml and sitemap.xml.gz files"
   task :generate, [ :base_url ] => :environment do |task, args|
-    sitemap = Sitemap.new(base_url: args[:base_url])
+    sitemap = Sitemap.new(base_url: args[:base_url], update_robots: true)
 
     if sitemap.valid?
       sitemap.generate!

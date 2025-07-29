@@ -4,19 +4,21 @@ class Sitemap
   include ActiveModel::Model
   include ActiveModel::Attributes
 
+  include Sitemap::RobotsUpdatable
+
   ERROR_PAGES = %w[400.html 404.html 406-unsupported-browser.html 422.html 500.html].freeze
 
   attribute :base_url, :string
   attribute :build_dir, :string, default: -> { Parklife.application.config.build_dir }
+  attribute :update_robots, :boolean, default: false
 
-  validates :base_url, presence: true, format: { with: URI::regexp(%w[http https]) }
+  validates :base_url, presence: true, format: { with: URI.regexp(%w[http https]) }
 
   def generate!
     write_sitemap!
     write_compressed_sitemap!
 
-    puts "Generated sitemap.xml with #{total_pages} URLs"
-    puts "Generated sitemap.xml.gz (compressed)"
+    handle_robots_update!
 
     total_pages
   end
@@ -26,12 +28,16 @@ class Sitemap
   # File writing
   def write_sitemap!
     File.write(sitemap_path, xml_sitemap)
+
+    puts "Generated sitemap.xml with #{total_pages} URLs"
   end
 
   def write_compressed_sitemap!
-    Zlib::GzipWriter.open(compressed_sitemap_path) do |gzip|
+    Zlib::GzipWriter.open(sitemap_path(compressed: true)) do |gzip|
       gzip.write(xml_sitemap.squish)
     end
+
+    puts "Generated sitemap.xml.gz (compressed)"
   end
 
   # XML generation
@@ -86,11 +92,16 @@ class Sitemap
   end
 
   # File paths
-  def sitemap_path
-    @sitemap_path ||= File.join(build_dir, "sitemap.xml")
+  def sitemap_filename(compressed: false)
+    filename = "sitemap.xml"
+    compressed ? "#{filename}.gz" : filename
   end
 
-  def compressed_sitemap_path
-    @compressed_sitemap_path ||= "#{sitemap_path}.gz"
+  def sitemap_path(compressed: false)
+    File.join(build_dir, sitemap_filename(compressed:))
+  end
+
+  def sitemap_url(compressed: false)
+    "#{base_url}/#{sitemap_filename(compressed:)}"
   end
 end
