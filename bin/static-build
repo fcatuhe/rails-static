@@ -25,3 +25,18 @@ fi
 
 # List all files in the build (useful for debugging).
 find build -type f | sort
+
+# Generate sitemap.xml and sitemap.xml.gz from built files.
+base_found=false
+while [ $# -gt 0 ]; do
+  if [ "$1" = "--base" ] && [ -n "$2" ]; then
+    bundle exec rails "sitemap:generate[$2]"
+    base_found=true
+    break
+  fi
+  shift
+done
+
+if [ "$base_found" = false ]; then
+  echo "Sitemap not generating: --base URL not provided"
+fi
