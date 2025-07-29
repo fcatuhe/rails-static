@@ -26,7 +26,7 @@ fi
 # List all files in the build (useful for debugging).
 find build -type f | sort
 
-# Generate sitemap.xml and sitemap.xml.gz from built files.
+# Generate sitemap.xml, sitemap.xml.gz and robots.txt from built files.
 base_found=false
 while [ $# -gt 0 ]; do
   if [ "$1" = "--base" ] && [ -n "$2" ]; then
