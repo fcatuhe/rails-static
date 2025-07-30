@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/benpickles/parklife.git
+  revision: 9dc861646155428c4bee38bf2a43423689fe0cfa
+  specs:
+    parklife (0.7.0)
+      nokogiri
+      rack-test
+      thor
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -168,10 +177,6 @@ GEM
     nokogiri (1.18.9-x86_64-linux-musl)
       racc (~> 1.4)
     parallel (1.27.0)
-    parklife (0.7.0)
-      nokogiri
-      rack-test
-      thor
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
@@ -318,7 +323,7 @@ DEPENDENCIES
   importmap-rails
   kramdown
   kramdown-parser-gfm
-  parklife
+  parklife!
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2)

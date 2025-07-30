@@ -4,28 +4,28 @@ class Sitemap
   include ActiveModel::Model
   include ActiveModel::Attributes
 
-  include Sitemap::RobotsUpdatable
+  include Sitemap::RobotsGeneratable
 
   ERROR_PAGES = %w[400.html 404.html 406-unsupported-browser.html 422.html 500.html].freeze
 
   attribute :base_url, :string
-  attribute :build_dir, :string, default: -> { Parklife.application.config.build_dir }
-  attribute :update_robots, :boolean, default: false
+  attribute :build_dir, :string
+  attribute :generate_robots, :boolean, default: false
 
   validates :base_url, presence: true, format: { with: URI.regexp(%w[http https]) }
+  validates :build_dir, presence: true
 
   def generate!
     write_sitemap!
     write_compressed_sitemap!
 
-    handle_robots_update!
+    handle_robots_generation!
 
     total_pages
   end
 
   private
 
-  # File writing
   def write_sitemap!
     File.write(sitemap_path, xml_sitemap)
 
@@ -34,7 +34,7 @@ class Sitemap
 
   def write_compressed_sitemap!
     Zlib::GzipWriter.open(sitemap_path(compressed: true)) do |gzip|
-      gzip.write(xml_sitemap.squish)
+      gzip.write(minified_xml_sitemap)
     end
 
     Rails.logger.info("Generated sitemap.xml.gz (compressed)")
@@ -43,6 +43,10 @@ class Sitemap
   # XML generation
   def xml_sitemap
     @xml_sitemap ||= build_xml_sitemap
+  end
+
+  def minified_xml_sitemap
+    @minified_xml_sitemap ||= xml_sitemap.gsub(/>\s+</, "><")
   end
 
   def build_xml_sitemap
@@ -86,7 +90,6 @@ class Sitemap
     file_path.sub("#{build_dir}/", "")
   end
 
-  # Domain queries
   def total_pages
     sitemap_entries.size
   end

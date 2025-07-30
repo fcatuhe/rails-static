@@ -25,7 +25,7 @@ gem "bootsnap", require: false
 gem "decant"
 gem "kramdown"
 gem "kramdown-parser-gfm"
-gem "parklife"
+gem "parklife", github: "benpickles/parklife"
 gem "rouge"
 
 group :development, :test do

@@ -9,6 +9,16 @@ Parklife.application.configure do |config|
   # https://github.com/benpickles/parklife#configuration
 end
 
+# INFO: 30jul25 - using GitHub source for Parklife until next gem release includes PR #124
+# which re-introduced build callbacks - https://github.com/benpickles/parklife/pull/124
+Parklife.application.after_build do |application|
+  sitemap = Sitemap.new(base_url: application.config.base, build_dir: application.config.build_dir, generate_robots: true)
+
+  return Rails.logger.error("Error generating sitemap: #{sitemap.errors.full_messages.join(', ')}") unless sitemap.valid?
+
+  sitemap.generate!
+end
+
 Parklife.application.routes do
   root crawl: true
 
