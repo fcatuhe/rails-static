@@ -20,7 +20,11 @@ module Sitemap::RobotsGeneratable
   end
 
   def robots_content
-    "User-agent: *\nAllow: /\n\n#{sitemap_references}"
+    [ robots_directives, sitemap_references ].join("\n\n")
+  end
+
+  def robots_directives
+    "User-agent: *\nAllow: /"
   end
 
   def sitemap_references
