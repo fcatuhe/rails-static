@@ -25,7 +25,9 @@ gem "bootsnap", require: false
 gem "decant"
 gem "kramdown"
 gem "kramdown-parser-gfm"
-gem "parklife"
+# TODO: 30jul25 - switch back to gem release once PR #124 is included (re-introduces build callbacks)
+#       https://github.com/benpickles/parklife/pull/124
+gem "parklife", github: "benpickles/parklife"
 gem "rouge"
 
 group :development, :test do
