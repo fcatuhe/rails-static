@@ -16,7 +16,7 @@ module Sitemap::RobotsGeneratable
   end
 
   def robots_file_path
-    File.join(build_dir, "robots.txt")
+    Pathname.new(build_dir).join("robots.txt")
   end
 
   def robots_content

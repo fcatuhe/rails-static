@@ -46,7 +46,10 @@ class Sitemap
   end
 
   def minified_xml_sitemap
-    @minified_xml_sitemap ||= xml_sitemap.gsub(/>\s+</, "><")
+    @minified_xml_sitemap ||= begin
+      doc = Nokogiri::XML(xml_sitemap) { |config| config.noblanks }
+      doc.to_xml(save_with: Nokogiri::XML::Node::SaveOptions::AS_XML)
+    end
   end
 
   def build_xml_sitemap
@@ -78,7 +81,7 @@ class Sitemap
   def discoverable_html_files
     return [] unless Dir.exist?(build_dir)
 
-    Dir.glob(File.join(build_dir, "**/*.html"))
+    Dir.glob(Pathname.new(build_dir).join("**/*.html"))
        .reject { |path| error_page?(path) }
   end
 
@@ -101,7 +104,7 @@ class Sitemap
   end
 
   def sitemap_path(compressed: false)
-    File.join(build_dir, sitemap_filename(compressed:))
+    Pathname.new(build_dir).join(sitemap_filename(compressed:))
   end
 
   def sitemap_url(compressed: false)
