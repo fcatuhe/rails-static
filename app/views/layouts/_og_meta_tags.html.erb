@@ -1,0 +1,3 @@
+<%- tags.reject { |_key, content| content.blank? }.each do |key, content| %>
+  <%= og_meta_tag(key, content) %>
+<%- end %>
