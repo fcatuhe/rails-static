@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Rails Static" %></title>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= render 'layouts/og_meta_tags', tags: {
+      title: title,
+      description: description,
+      image: image_url('og_image.jpg'),
+      author: author,
+      type: "website",
+      site_name: site_name,
+      url: canonical_url,
+    } %>
+
+    <%= tag :link, rel: "canonical", href: canonical_url %>
+
+    <%= favicon_link_tag 'favicon.ico', sizes: '32x32' %>
+    <%= favicon_link_tag 'icon.svg', type: 'image/svg+xml' %>
+    <%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon' %>
+
+    <%= tag :meta, name: "robots", content: robots_content %>
+
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 
