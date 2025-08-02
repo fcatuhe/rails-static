@@ -1,5 +1,5 @@
 ---
-title: Set up with Decant and Kramdown
+title: Set up with Decant and kramdown
 position: 2
 ---
 
@@ -9,9 +9,13 @@ position: 2
 >
 > [Ben Pickles](https://www.benpickles.com/articles/95-introducing-decant){:target="decant"}
 
-Use Decant and Kramdown to parse static markdown content files through Rails' router, controller, model and view.
+> kramdown (sic, not Kramdown or KramDown, just kramdown) is a free MIT-licensed Ruby library for parsing and converting a superset of Markdown.
+>
+> [kramdown](https://kramdown.gettalong.org/){:target="kramdown"}
 
-### Install Decant and Kramdown
+Use Decant and kramdown to parse static markdown content files through Rails' router, controller, model and view.
+
+### Install Decant and kramdown
 
 ##### _[Gemfile](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/Gemfile#L25){:target="github"}_
 
@@ -45,7 +49,7 @@ Page = Decant.define(dir: "content/pages", ext: "md") do
 end
 ```
 
-### Create a helper that configures Kramdown
+### Create a helper that configures kramdown
 
 ##### _[app/helpers/application_helper.rb](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/app/helpers/application_helper.rb){:target="github"}_
 

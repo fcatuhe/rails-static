@@ -9,6 +9,11 @@ position: 1
 >
 > _[Ruby on Rails](https://rubyonrails.org){:target="rails"}_
 
+> Hotwire is an alternative approach to building modern web applications without using much JavaScript by sending HTML instead of JSON over the wire.
+>
+> _[Hotwire](https://hotwired.dev/){:target="hotwire"}_
+
+
 ### Install Rails with Hotwire
 
 Install Rails, skip unnecessary modules for static site generation:

@@ -27,7 +27,7 @@ This very website is generated using this approach - let's learn how to build an
 This guide will teach you how to transform Rails into a powerful static site generator, leveraging a modern Hotwire stack. You will discover how to:
 
 - Create a minimal Rails application optimized for static site generation
-- Process markdown content with frontmatter using [Decant](https://www.benpickles.com/articles/95-introducing-decant){:target="decant"} and [Kramdown](https://kramdown.gettalong.org){:target="kramdown"}
+- Process markdown content with frontmatter using [Decant](https://www.benpickles.com/articles/95-introducing-decant){:target="decant"} and [kramdown](https://kramdown.gettalong.org){:target="kramdown"}
 - Deploy automatically to GitHub Pages with [Parklife](https://parklife.dev){:target="parklife"}
 - Use ERB template processing for dynamic content generation within markdown files
 - Enhance user experience with [Turbo](https://turbo.hotwired.dev){:target="turbo"} Drive for instant page navigation

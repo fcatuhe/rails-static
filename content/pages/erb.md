@@ -7,7 +7,7 @@ position: 4
 
 ### Update render helper for ERB processing
 
-Update the render helper to process ERB before sending content to Kramdown:
+Update the render helper to process ERB before sending content to kramdown:
 
 ##### _[app/helpers/application_helper.rb](https://github.com/fcatuhe/rails-static/blob/cd15800c030a0f54d095732173defb9e2c8616e7/app/helpers/application_helper.rb){:target="github"}_
 

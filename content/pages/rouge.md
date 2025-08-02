@@ -24,7 +24,7 @@ gem "rouge"
 bundle
 ```
 
-### Configure Rouge in Kramdown
+### Configure Rouge in kramdown
 
 ##### _[app/helpers/application_helper.rb](https://github.com/fcatuhe/rails-static/blob/9820d8c7fc5b01dac968db123347d440b70a10ee/app/helpers/application_helper.rb#L4){:target="github"}_
 
