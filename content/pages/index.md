@@ -20,6 +20,8 @@ This very website is generated using this approach - let's learn how to build an
 
 → <%= link_to_page "rails-and-hotwire", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
 
+<%= image_tag "og-image.jpg" %>
+
 ---
 
 #### What you will learn
