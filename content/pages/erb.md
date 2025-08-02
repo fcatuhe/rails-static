@@ -1,13 +1,15 @@
 ---
-title: Get help from ERB
+title: Process content with ERB
 position: 4
 ---
 
 # <%= @page.title %>
 
-Let's update our render helper to process ERB, before sending it to Kramdown.
+### Update render helper for ERB processing
 
-##### _app/helpers/application_helper.rb_
+Update the render helper to process ERB before sending content to Kramdown:
+
+##### _[app/helpers/application_helper.rb](https://github.com/fcatuhe/rails-static/blob/cd15800c030a0f54d095732173defb9e2c8616e7/app/helpers/application_helper.rb){:target="github"}_
 
 ```ruby
 module ApplicationHelper
@@ -18,9 +20,9 @@ module ApplicationHelper
 end
 ```
 
-We can use Ruby directly in our markdown files. Like this:
+Use Ruby directly in markdown files:
 
-##### _app/views/erb.md_
+##### _[app/views/erb.md](https://github.com/fcatuhe/rails-static/blob/3734267a1e63d7ef4c5d4d2eab247e641bed253e/content/pages/erb.md?plain=1#L35){:target="github"}_
 
 ```erb
 ...
@@ -38,11 +40,11 @@ To display:
   - <%= link_to page.title, page.slug %>
 <%- end %>
 
-### Additional helpers
+### Create additional helpers
 
-We can create more helpers to be used directly from our page content files:
+Create more helpers for use in page content files:
 
-##### _app/helpers/pages_helper.rb_
+##### _[app/helpers/pages_helper.rb](https://github.com/fcatuhe/rails-static/blob/cd15800c030a0f54d095732173defb9e2c8616e7/app/helpers/pages_helper.rb){:target="github"}_
 
 ```ruby
 module PagesHelper
@@ -58,7 +60,7 @@ end
 
 The `pages_image_tag` helper requires that we add the content folder to [Propshaft](https://github.com/rails/propshaft){:target="propshaft"}'s assets paths:
 
-##### _config/application.rb_
+##### _[config/application.rb](https://github.com/fcatuhe/rails-static/blob/cd15800c030a0f54d095732173defb9e2c8616e7/config/application.rb#L42){:target="github"}_
 
 ```ruby
 ...

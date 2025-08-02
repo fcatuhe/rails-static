@@ -1,5 +1,5 @@
 ---
-title: Dance with Stimulus
+title: Add interaction with Stimulus
 position: 6
 ---
 
@@ -9,11 +9,13 @@ position: 6
 >
 > _[Hotwire Stimulus](https://stimulus.hotwired.dev){:target="stimulus"}_
 
-Let's implement hotkeys, to navigate even faster between pages!
+Stimulus connects JavaScript behavior to your HTML using simple data attributes. Controllers respond to DOM events and can interact with targets and values defined in your markup.
 
-We want to use it this way:
+### Example: implement keyboard navigation
 
-##### _content/pages/stimulus.md_
+As an example of adding interaction, implement hotkeys to navigate faster between pages:
+
+##### _[content/pages/stimulus.md](https://github.com/fcatuhe/rails-static/blob/b6170767207c038fe4e518a889d7cbcfdee4ffa0/content/pages/stimulus.md?plain=1#L49){:target="github"}_
 
 ```erb
 ...
@@ -23,9 +25,9 @@ We want to use it this way:
 _← <%%= link_to_page "turbo", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_
 ```
 
-Create the Stimulus controller:
+### Create the Stimulus controller
 
-##### _app/javascript/controllers/hotkey_controller.js_
+##### _[app/javascript/controllers/hotkey_controller.js](https://github.com/fcatuhe/rails-static/blob/b6170767207c038fe4e518a889d7cbcfdee4ffa0/app/javascript/controllers/hotkey_controller.js){:target="github"}_
 
 ```javascript
 import { Controller } from "@hotwired/stimulus"
@@ -38,7 +40,7 @@ export default class extends Controller {
 }
 ```
 
-... and start dancing your fingers on the keyboard!
+Try it now with left and right keys!
 
 ---
 

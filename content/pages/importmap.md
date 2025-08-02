@@ -1,5 +1,5 @@
 ---
-title: Celebrate with Importmap
+title: Manage dependencies with Importmap
 position: 7
 ---
 
@@ -9,9 +9,13 @@ position: 7
 >
 > _[importmap-rails](https://github.com/rails/importmap-rails){:target="importmap-rails"}_
 
-Let's import a JavaScript dependency, then configure it with Stimulus:
+Importmap allows you to add JavaScript libraries to your Rails application without complex build tools. Simply pin external modules to CDN URLs and import them directly in your JavaScript files.
 
-##### _config/importmap.rb_
+### Example: add canvas-confetti library
+
+As an example of managing dependencies, import the canvas-confetti library and configure it with Stimulus:
+
+##### _[config/importmap.rb](https://github.com/fcatuhe/rails-static/blob/8f8d12037a9d8847a395919c07b18b5538405f9e/config/importmap.rb#L9){:target="github"}_
 
 ```ruby
 ...
@@ -19,7 +23,7 @@ Let's import a JavaScript dependency, then configure it with Stimulus:
 pin "canvas-confetti", to: "https://cdn.jsdelivr.net/npm/canvas-confetti@1/dist/confetti.module.mjs"
 ```
 
-##### _app/javascript/controllers/confetti_controller.js_
+##### _[app/javascript/controllers/confetti_controller.js](https://github.com/fcatuhe/rails-static/blob/8f8d12037a9d8847a395919c07b18b5538405f9e/app/javascript/controllers/confetti_controller.js){:target="github"}_
 
 ```javascript
 import { Controller } from "@hotwired/stimulus"
@@ -89,9 +93,9 @@ export default class extends Controller {
 }
 ```
 
-... and start celebrating!
+Test the confetti animation:
 
-##### _content/pages/importmap.md_
+##### _[content/pages/importmap.md](https://github.com/fcatuhe/rails-static/blob/8f8d12037a9d8847a395919c07b18b5538405f9e/content/pages/importmap.md?plain=1#L106){:target="github"}_
 
 ```erb
 ...

@@ -5,12 +5,25 @@ position: 9
 
 # <%= @page.title %>
 
-- Generate a sitemap, including robots file
-- Add web page metadata, including canonical URL
+### Going further
+
+Continue exploring additional features _- press C to continue_
+
+- Styling
+  - <%= link_to_page "classless-style", data: { controller: "hotkey", action: "keydown.c@document->hotkey#click" } %>
+  - <%= link_to_page "rouge" %>
+- SEO
+  - <%= link_to_page "web-page-metadata" %>
+  - <%= link_to_page "sitemap-and-robots" %>
+
+### Ideas
+
 - Update layout to add navigation bar in header, and refactor navigation in footer
-- Add code syntax highlighting
+- Deploy to a staging environment
 - Experiment a very minimal Rails configuration
 - Strip Turbo down to Turbo Drive
+- Create a Rails Application Template
+ 
 - Use [Rails on Wasm](https://web.dev/blog/ruby-on-rails-on-webassembly){:target="rails-on-wasm"} as a CMS in your browser that commits files to GitHub
 - Create StaticRecord module to metaprogram content declaration
 

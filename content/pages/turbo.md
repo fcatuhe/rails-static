@@ -9,7 +9,7 @@ position: 5
 >
 > _[Hotwire Turbo](https://turbo.hotwired.dev){:target="turbo"}_
 
-Did you notice how our pages get _replaced_ without triggering a full reload? Or even, how the next page is prefetched when we hover on links?
+Notice how pages get _replaced_ without triggering a full reload, and how the next page is prefetched when hovering on links:
 
 <%= pages_image_tag "network.png", title: "Browser developer tools Network tab showing prefetch requests triggered on hover and fast page loads without full refresh" %>
 

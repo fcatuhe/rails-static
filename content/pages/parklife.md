@@ -11,7 +11,7 @@ position: 3
 
 ### Install Parklife
 
-##### _Gemfile_
+##### _[Gemfile](https://github.com/fcatuhe/rails-static/blob/89be109ebe531b925134779598849eec8b4245f9/Gemfile#L28){:target="github"}_
 
 ```ruby
 ...
@@ -52,7 +52,7 @@ And the GitHub Action triggered to re-run:
 
 <%= pages_image_tag "re-run.png", title: "GitHub Actions page with 'Re-run all jobs' button highlighted to retry the failed workflow" %>
 
-### Voilà, the website is online!
+### Voilà! Website deployed
 
 <%= pages_image_tag "rails-static.png", title: "Successfully deployed Rails Static website showing the homepage with title and navigation" %>
 

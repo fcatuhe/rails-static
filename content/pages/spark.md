@@ -1,5 +1,5 @@
 ---
-title: Spark some developer joy
+title: Enable live-reloading with Spark
 position: 8
 ---
 
@@ -11,7 +11,7 @@ position: 8
 
 ### Install and configure Hotwire Spark
 
-##### _Gemfile_
+##### _[Gemfile](https://github.com/fcatuhe/rails-static/blob/df850b488f9068112f64dde417ec6a8a62706833/Gemfile#L45){:target="github"}_
 
 ```ruby
 ...
@@ -27,7 +27,7 @@ end
 bundle
 ```
 
-##### _config/environment/development.rb_
+##### _[config/environments/development.rb](https://github.com/fcatuhe/rails-static/blob/df850b488f9068112f64dde417ec6a8a62706833/config/environments/development.rb#L46){:target="github"}_
 
 ```ruby
 ...
@@ -44,7 +44,7 @@ end
 
 Uncomment action cable engine from Rails configuration:
 
-##### _config/application.rb_
+##### _[config/application.rb](https://github.com/fcatuhe/rails-static/blob/df850b488f9068112f64dde417ec6a8a62706833/config/application.rb#L14){:target="github"}_
 
 ```ruby
 ...
@@ -54,14 +54,14 @@ require "action_cable/engine"
 
 Create the cable configuration file:
 
-##### _config/cable.yml_
+##### _[config/cable.yml](https://github.com/fcatuhe/rails-static/blob/df850b488f9068112f64dde417ec6a8a62706833/config/cable.yml){:target="github"}_
 
 ```yaml
 development:
   adapter: async
 ```
 
-Restart your development server for the new configuration to be taken into account.
+Restart the development server to apply the new configuration.
 
 ---
 

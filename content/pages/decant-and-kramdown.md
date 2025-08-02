@@ -9,11 +9,11 @@ position: 2
 >
 > [Ben Pickles](https://www.benpickles.com/articles/95-introducing-decant){:target="decant"}
 
-We are using Decant and Kramdown to parse our _static_ markdown content files, and go through Rails' router, controller, model and view.
+Use Decant and Kramdown to parse static markdown content files through Rails' router, controller, model and view.
 
 ### Install Decant and Kramdown
 
-##### _Gemfile_
+##### _[Gemfile](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/Gemfile#L25){:target="github"}_
 
 ```ruby
 ...
@@ -31,7 +31,7 @@ bundle
 
 ### Create a Page model that configures Decant
 
-##### _app/models/page.rb_
+##### _[app/models/page.rb](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/app/models/page.rb){:target="github"}_
 
 ```ruby
 Page = Decant.define(dir: "content/pages", ext: "md") do
@@ -47,7 +47,7 @@ end
 
 ### Create a helper that configures Kramdown
 
-##### _app/helpers/application_helper.rb_
+##### _[app/helpers/application_helper.rb](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/app/helpers/application_helper.rb){:target="github"}_
 
 ```ruby
 module ApplicationHelper
@@ -59,7 +59,7 @@ end
 
 ### Create the controller, view and routes
 
-##### _app/controllers/pages_controller.rb_
+##### _[app/controllers/pages_controller.rb](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/app/controllers/pages_controller.rb){:target="github"}_
 
 ```ruby
 class PagesController < ApplicationController
@@ -69,13 +69,13 @@ class PagesController < ApplicationController
 end
 ```
 
-##### _app/views/pages/show.html.erb_
+##### _[app/views/pages/show.html.erb](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/app/views/pages/show.html.erb){:target="github"}_
 
 ```erb
 <%%= render_content_from @page %>
 ```
 
-##### _config/routes.rb_
+##### _[config/routes.rb](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/config/routes.rb#L15){:target="github"}_
 
 ```ruby
 Rails.application.routes.draw do
@@ -87,13 +87,13 @@ end
 
 ### Create a first static page
 
-##### _content/pages/index.md_
+##### _[content/pages/index.md](https://github.com/fcatuhe/rails-static/blob/343b28a2dbacc5e573861089618b311a98788ed9/content/pages/index.md?plain=1){:target="github"}_
 
 ```markdown
 # Rails Static
 ```
 
-### Launch the development server
+### Start the development server
 
 ```sh
 dev

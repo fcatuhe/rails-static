@@ -5,7 +5,13 @@ position: 1
 
 # <%= @page.title %>
 
-Install Rails, as well as Hotwire, and skip some unnecessary modules
+> Compress the complexity of modern web apps.
+>
+> _[Ruby on Rails](https://rubyonrails.org){:target="rails"}_
+
+### Install Rails with Hotwire
+
+Install Rails, skip unnecessary modules for static site generation:
 
 ```sh
 rails new rails-static --skip-docker --skip-action-mailer --skip-action-mailbox --skip-action-text --skip-active-record --skip-active-job --skip-active-storage --skip-action-cable --skip-jbuilder --skip-test --skip-system-test --skip-thruster --skip-ci --skip-kamal --skip-solid
