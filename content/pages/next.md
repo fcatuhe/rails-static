@@ -21,7 +21,7 @@ Continue exploring additional features _- press C to continue_
 - Update layout to add navigation bar in header, and refactor navigation in footer
 - Deploy to a staging environment
 - Experiment a very minimal Rails configuration
-- Strip Turbo down to Turbo Drive
+- ~~Strip Turbo down to Turbo Drive~~ discarded in [Turbo issue #136](https://github.com/hotwired/turbo/issues/136){:target="turbo"}
 - Create a Rails Application Template
  
 - Use [Rails on Wasm](https://web.dev/blog/ruby-on-rails-on-webassembly){:target="rails-on-wasm"} as a CMS in your browser that commits files to GitHub
