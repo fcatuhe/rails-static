@@ -51,6 +51,6 @@ _Commit: [Rouge](https://github.com/fcatuhe/rails-static/commit/9820d8c7fc5b01da
 
 ---
 
-→ <%= link_to_page "web-page-metadata", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
+→ <%= link_to_page "web-page-metadata", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click touch:swipe-right@window->hotkey#click" } %>
 
-_← <%= link_to_page "classless-style", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_
+_← <%= link_to_page "classless-style", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click touch:swipe-left@window->hotkey#click" } %>_

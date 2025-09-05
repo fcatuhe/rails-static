@@ -15,6 +15,6 @@ Notice how pages get _replaced_ without triggering a full reload, and how the ne
 
 ---
 
-→ <%= link_to_page "stimulus", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
+→ <%= link_to_page "stimulus", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click touch:swipe-right@window->hotkey#click" } %>
 
-_← <%= link_to_page "erb", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_
+_← <%= link_to_page "erb", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click touch:swipe-left@window->hotkey#click" } %>_

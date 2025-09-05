@@ -115,6 +115,6 @@ _Commit: [Decant and Kramdown](https://github.com/fcatuhe/rails-static/commit/34
 
 ---
 
-→ <%= link_to_page "parklife", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
+→ <%= link_to_page "parklife", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click touch:swipe-right@window->hotkey#click" } %>
 
-_← <%= link_to_page "rails-and-hotwire", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_
+_← <%= link_to_page "rails-and-hotwire", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click touch:swipe-left@window->hotkey#click" } %>_

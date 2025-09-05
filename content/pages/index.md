@@ -18,7 +18,7 @@ This is not a new framework. It's a thoughtful collection of existing gems that 
 
 This very website is generated using this approach - let's learn how to build and deploy it together!
 
-→ <%= link_to_page "rails-and-hotwire", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
+→ <%= link_to_page "rails-and-hotwire", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click touch:swipe-right@window->hotkey#click" } %>
 
 <%= image_tag "og-image.jpg" %>
 

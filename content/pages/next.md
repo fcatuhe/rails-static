@@ -18,6 +18,7 @@ Continue exploring additional features _- press C to continue_
 
 ### Ideas
 
+- Add touch gestures for navigation → document commit [Touch controller](https://github.com/fcatuhe/rails-static/commit/e38e2da5e6eebacfad4189cee2b2a09f8bfec088){:target="github"}
 - Update layout to add navigation bar in header, and refactor navigation in footer
 - Deploy to a staging environment
 - Experiment a very minimal Rails configuration
@@ -38,4 +39,4 @@ Continue exploring additional features _- press C to continue_
 
 ---
 
-_← <%= link_to_page "spark", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_
+_← <%= link_to_page "spark", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click touch:swipe-left@window->hotkey#click" } %>_

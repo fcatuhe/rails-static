@@ -40,6 +40,6 @@ _Commit: [Classless style](https://github.com/fcatuhe/rails-static/commit/379b4f
 
 ---
 
-→ <%= link_to_page "rouge", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click" } %>
+→ <%= link_to_page "rouge", data: { controller: "hotkey", action: "keydown.right@document->hotkey#click touch:swipe-right@window->hotkey#click" } %>
 
-_← <%= link_to_page "next", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click" } %>_
+_← <%= link_to_page "next", data: { controller: "hotkey", action: "keydown.left@document->hotkey#click touch:swipe-left@window->hotkey#click" } %>_
