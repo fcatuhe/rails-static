@@ -35,24 +35,6 @@ end
 
 Delete the default `robots.txt` file from the `public/` folder.
 
-### [temporary] Install Parklife edge version
-
-At the time of this guide, the build hooks are not included in the latest Parklife release.
-
-##### _[Gemfile](https://github.com/fcatuhe/rails-static/blob/45941923dc38f303e7bb124734fe0a2f914db347/Gemfile#L28){:target="github"}_
-
-```ruby
-...
-# TODO: 30jul25 - switch back to gem release once PR #124 is included (re-introduces build callbacks)
-#       https://github.com/benpickles/parklife/pull/124
-gem "parklife", github: "benpickles/parklife"
-...
-```
-
-```sh
-bundle
-```
-
 ---
 
 ## Implementation Details

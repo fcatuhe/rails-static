@@ -11,11 +11,11 @@ position: 3
 
 ### Install Parklife
 
-##### _[Gemfile](https://github.com/fcatuhe/rails-static/blob/89be109ebe531b925134779598849eec8b4245f9/Gemfile#L28){:target="github"}_
+##### _[Gemfile](https://github.com/fcatuhe/rails-static/blob/81009ffa3702affc79d619650cf902b32a7f4fcf/Gemfile#L28){:target="github"}_
 
 ```ruby
 ...
-gem "parklife"
+gem "parklife-rails"
 
 ...
 ```
@@ -58,7 +58,7 @@ And the GitHub Action triggered to re-run:
 
 ---
 
-_Commit: [Parklife](https://github.com/fcatuhe/rails-static/commit/89be109ebe531b925134779598849eec8b4245f9){:target="github"}_
+_Commit: [Parklife](https://github.com/fcatuhe/rails-static/commit/81009ffa3702affc79d619650cf902b32a7f4fcf){:target="github"}_
 
 ---
 
