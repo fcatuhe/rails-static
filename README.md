@@ -4,7 +4,7 @@ _Generate static sites with Rails · a step by step guide_
 
 ### Another framework?
 
-The Ruby ecosystem offers many static site generators - [Jekyll](https://jekyllrb.com), [Middleman](https://middlemanapp.com), [Kamal Skiff](https://github.com/basecamp/kamal-skiff), [Sitepress](https://sitepress.cc), [Bridgetown](https://www.bridgetownrb.com/), [High Voltage](https://thoughtbot.github.io/high_voltage), [Nanoc](https://nanoc.app), ... - and countless more exist beyond Ruby.
+The Ruby ecosystem offers many static site generators - [Jekyll](https://jekyllrb.com), [Middleman](https://middlemanapp.com), [Kamal Skiff](https://github.com/basecamp/kamal-skiff), [Perron](https://perron.railsdesigner.com), [Sitepress](https://sitepress.cc), [Bridgetown](https://www.bridgetownrb.com/), [High Voltage](https://thoughtbot.github.io/high_voltage), [Nanoc](https://nanoc.app), ... - and countless more exist beyond Ruby.
 
 The intent here is **to remove one** - to use Rails and all its magic goodies for both dynamic and static sites.
 
