@@ -1,7 +1,10 @@
 module ApplicationHelper
   def render_content_from(page)
-    erb_processed_content = render(inline: page.content, layout: false)
-    Kramdown::Document.new(erb_processed_content, input: "GFM", syntax_highlighter: :rouge).to_html.html_safe
+    Kramdown::Document.new(render_erb(page.content), input: "GFM", syntax_highlighter: :rouge).to_html.html_safe
+  end
+
+  def render_erb(content)
+    render inline: content, layout: false
   end
 
   def site_name
