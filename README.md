@@ -10,7 +10,7 @@ The intent here is **to remove one** - to use Rails and all its magic goodies fo
 
 This is not a new framework. It's a thoughtful collection of existing gems that each excel at one task and integrate seamlessly with Rails.
 
-→ [Rails Static](https://rails-static.com)
+→ [Rails Static](https://fcatuhe.github.io/rails-static)
 
 ---
 
@@ -31,4 +31,4 @@ This guide will teach you how to transform Rails into a powerful static site gen
 - Optimize for SEO with proper web page metadata and Open Graph tags
 - Generate XML sitemaps and robots.txt files for search engines
 
-→ [Rails Static](https://rails-static.com)
+→ [Rails Static](https://fcatuhe.github.io/rails-static)
