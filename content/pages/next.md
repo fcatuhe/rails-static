@@ -15,6 +15,8 @@ Continue exploring additional features _- press C to continue_
 - SEO
   - <%= link_to_page "web-page-metadata" %>
   - <%= link_to_page "sitemap-and-robots" %>
+- Content
+  - <%= link_to_page "html-pages" %>
 
 ### Ideas
 
