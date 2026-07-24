@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   get "/.well-known/*", to: ->(_env) { [ 204, {}, [] ] }
 
   root "pages#show", slug: "index"
+  get "/html/*slug", to: "html_pages#show", as: :html_page
   get "/*slug", to: "pages#show", as: :page
 end
