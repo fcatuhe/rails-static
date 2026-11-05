@@ -1,0 +1,20 @@
+---
+title: HTML demo
+description: A page written in plain HTML with ERB, no markdown involved.
+---
+
+<h1><%= @page.title %></h1>
+
+<p>
+  This page lives in <code>content/html_pages/demo.html.erb</code> - plain HTML
+  with ERB and frontmatter, rendered without kramdown.
+</p>
+
+<p>
+  It still benefits from the whole Rails stack: layout, helpers, routes and
+  <%= link_to "Turbo", page_path("turbo") %> navigation.
+</p>
+
+<p>
+  <em>← <%= link_to "Write pages with HTML and ERB", page_path("html-pages") %></em>
+</p>
